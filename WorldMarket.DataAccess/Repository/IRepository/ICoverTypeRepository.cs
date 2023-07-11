@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WorldMarket.Models;
 
 namespace WorldMarket.DataAccess.Repository.IRepository
 {
-    public interface IUnitOfWork
+    public interface ICoverTypeRepository: IRepository<CoverType>
     {
-        ICategoryRepository Categories { get; }
-        ICoverTypeRepository CoverTypes { get; }
-        void Save();
+        void Update(CoverType obj);
     }
 }

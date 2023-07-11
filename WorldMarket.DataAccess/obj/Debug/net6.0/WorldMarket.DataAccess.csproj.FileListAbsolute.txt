@@ -1,0 +1,17 @@
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.DataAccess\obj\Debug\net6.0\WorldMarket.DataAccess.csproj.AssemblyReference.cache
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.DataAccess\obj\Debug\net6.0\WorldMarket.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.DataAccess\obj\Debug\net6.0\WorldMarket.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.DataAccess\obj\Debug\net6.0\WorldMarket.DataAccess.AssemblyInfo.cs
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.DataAccess\obj\Debug\net6.0\WorldMarket.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.DataAccess\bin\Debug\net6.0\WorldMarket.DataAccess.deps.json
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.DataAccess\bin\Debug\net6.0\WorldMarket.DataAccess.runtimeconfig.json
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.DataAccess\bin\Debug\net6.0\WorldMarket.DataAccess.dll
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.DataAccess\bin\Debug\net6.0\WorldMarket.DataAccess.pdb
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.DataAccess\bin\Debug\net6.0\WorldMarket.Models.dll
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.DataAccess\bin\Debug\net6.0\WorldMarket.Models.pdb
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.DataAccess\obj\Debug\net6.0\WorldMarket.DataAccess.csproj.CopyComplete
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.DataAccess\obj\Debug\net6.0\WorldMarket.DataAccess.dll
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.DataAccess\obj\Debug\net6.0\refint\WorldMarket.DataAccess.dll
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.DataAccess\obj\Debug\net6.0\WorldMarket.DataAccess.pdb
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.DataAccess\obj\Debug\net6.0\WorldMarket.DataAccess.genruntimeconfig.cache
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.DataAccess\obj\Debug\net6.0\ref\WorldMarket.DataAccess.dll

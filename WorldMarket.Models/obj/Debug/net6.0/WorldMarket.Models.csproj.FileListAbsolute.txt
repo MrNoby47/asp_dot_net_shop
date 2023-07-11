@@ -1,0 +1,12 @@
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.Models\bin\Debug\net6.0\WorldMarket.Models.deps.json
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.Models\bin\Debug\net6.0\WorldMarket.Models.dll
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.Models\bin\Debug\net6.0\WorldMarket.Models.pdb
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.Models\obj\Debug\net6.0\WorldMarket.Models.csproj.AssemblyReference.cache
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.Models\obj\Debug\net6.0\WorldMarket.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.Models\obj\Debug\net6.0\WorldMarket.Models.AssemblyInfoInputs.cache
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.Models\obj\Debug\net6.0\WorldMarket.Models.AssemblyInfo.cs
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.Models\obj\Debug\net6.0\WorldMarket.Models.csproj.CoreCompileInputs.cache
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.Models\obj\Debug\net6.0\WorldMarket.Models.dll
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.Models\obj\Debug\net6.0\refint\WorldMarket.Models.dll
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.Models\obj\Debug\net6.0\WorldMarket.Models.pdb
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.Models\obj\Debug\net6.0\ref\WorldMarket.Models.dll

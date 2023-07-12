@@ -243,3 +243,8 @@ C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket\bin\Debug\net6.0\WorldMa
 C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket\bin\Debug\net6.0\WorldMarket.Models.dll
 C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket\bin\Debug\net6.0\WorldMarket.DataAccess.pdb
 C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket\bin\Debug\net6.0\WorldMarket.Models.pdb
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket\obj\Debug\net6.0\WorldMarket.MvcApplicationPartsAssemblyInfo.cs

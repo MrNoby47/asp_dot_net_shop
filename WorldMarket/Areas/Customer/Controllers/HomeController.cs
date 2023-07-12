@@ -2,8 +2,9 @@
 using System.Diagnostics;
 using WorldMarket.Models;
 
-namespace WorldMarket.Controllers
+namespace WorldMarket.Areas.Customer.Controllers
 {
+    [Area("Customer")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

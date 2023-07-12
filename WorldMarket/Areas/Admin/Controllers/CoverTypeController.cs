@@ -2,8 +2,9 @@
 using WorldMarket.DataAccess.Repository.IRepository;
 using WorldMarket.Models;
 
-namespace WorldMarket.Controllers
+namespace WorldMarket.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class CoverTypeController : Controller
     {
         private readonly IUnitOfWork _unitOfwork;
@@ -17,8 +18,7 @@ namespace WorldMarket.Controllers
             IEnumerable<CoverType> coverList = _unitOfwork.CoverTypes.GetAll();
             return View(coverList);
         }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+      
         public IActionResult Create(CoverType obj)
         {
             if (ModelState.IsValid)
@@ -33,7 +33,7 @@ namespace WorldMarket.Controllers
         //GET
         public IActionResult Edit(int? id)
         {
-            if(id ==0 || id == null)
+            if (id == 0 || id == null)
             {
                 return NotFound();
             }
@@ -43,7 +43,7 @@ namespace WorldMarket.Controllers
                 return NotFound();
             }
             return View(coverFromDb);
-            
+
         }
         //POST
         [HttpPost]
@@ -89,9 +89,9 @@ namespace WorldMarket.Controllers
                 return NotFound();
             }
             _unitOfwork.CoverTypes.Remove(coverFromDb);
-             _unitOfwork.Save();
-             TempData["success"] = "Cover Type Deleted Successfully";
-             return RedirectToAction("Index");
+            _unitOfwork.Save();
+            TempData["success"] = "Cover Type Deleted Successfully";
+            return RedirectToAction("Index");
         }
     }
 }

@@ -5,8 +5,9 @@ using WorldMarket.DataAccess.Repository;
 using WorldMarket.DataAccess.Repository.IRepository;
 using WorldMarket.Models;
 
-namespace WorldMarket.Controllers
+namespace WorldMarket.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -22,7 +23,7 @@ namespace WorldMarket.Controllers
         }
         public IActionResult Create(Category obj)
         {
-            if(obj.Name == obj.DisplayOrder.ToString())
+            if (obj.Name == obj.DisplayOrder.ToString())
             {
                 ModelState.AddModelError("Name", "Name should be different to Display Order");
             }
@@ -32,20 +33,20 @@ namespace WorldMarket.Controllers
                 _unitOfWork.Save();
                 TempData["success"] = "Category created successfully";
                 return RedirectToAction("Index");
-               
+
             }
             return View(obj);
         }
-        
+
         //GET 
         public IActionResult Edit(int? id)
         {
-            if(id == 0 || id == null)
+            if (id == 0 || id == null)
             {
                 return NotFound();
             }
             var catFromDb = _unitOfWork.Categories.GetFirstOrDefault(u => u.Id == id);
-            if(catFromDb == null)
+            if (catFromDb == null)
             {
                 return NotFound();
             }
@@ -57,7 +58,7 @@ namespace WorldMarket.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Edit(Category obj)
         {
-            if(obj.Name == obj.DisplayOrder.ToString())
+            if (obj.Name == obj.DisplayOrder.ToString())
             {
                 ModelState.AddModelError("Name", "Name must be different to Display Order");
             }
@@ -67,14 +68,14 @@ namespace WorldMarket.Controllers
                 _unitOfWork.Save();
                 TempData["success"] = "Category updated successfully";
                 return RedirectToAction("Index");
-                
+
             }
             return View(obj);
         }
         //GET
         public IActionResult Delete(int? id)
         {
-            if(id == 0 || id == null)
+            if (id == 0 || id == null)
             {
                 return NotFound();
             }

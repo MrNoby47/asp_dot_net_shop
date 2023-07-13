@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using NuGet.Packaging.Signing;
 using WorldMarket.DataAccess.Repository.IRepository;
 using WorldMarket.Models;
 using WorldMarket.Models.View_Models;
@@ -10,9 +11,11 @@ namespace WorldMarket.Areas.Admin.Controllers
     public class ProductController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-        public ProductController(IUnitOfWork unitOfWork)
+        private readonly IWebHostEnvironment _hosEnvironmeent;
+        public ProductController(IUnitOfWork unitOfWork, IWebHostEnvironment hosEnvironmeent)
         {
             _unitOfWork = unitOfWork;
+            _hosEnvironmeent = hosEnvironmeent;
         }
 
         public IActionResult Index()
@@ -40,7 +43,8 @@ namespace WorldMarket.Areas.Admin.Controllers
             if (id == null || id == 0)
             {
                 //CREATE NEW PRODUCT
-              
+
+                return View(productVM);
             }
             else
             {
@@ -51,9 +55,32 @@ namespace WorldMarket.Areas.Admin.Controllers
         //POST
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Upset(ProductVM obj, IFormFile file)
+        public IActionResult Upsert(ProductVM obj, IFormFile? file)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                var rootPath = _hosEnvironmeent.WebRootPath;
+                if(file != null)
+                {
+                    var fileName = Guid.NewGuid().ToString();
+                    var upload = Path.Combine(rootPath, @"images\product");
+                    var extension = Path.GetExtension(file.FileName);
+
+                    using(var filestream = new FileStream(Path.Combine(upload, fileName+extension), FileMode.Create))
+                    {
+                        file.CopyTo(filestream);
+                    }
+
+                    obj.Product.ImgUrl = Path.Combine(@"\images\product", fileName+extension);
+                }
+                _unitOfWork.Products.Add(obj.Product);
+                _unitOfWork.Save();
+                TempData["success"] = "Product Created Successfully";
+                return RedirectToAction("Index");
+                
+
+            }
+            return View(obj);
         }
     }
 }

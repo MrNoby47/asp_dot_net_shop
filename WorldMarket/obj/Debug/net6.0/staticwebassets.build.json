@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "92lI8f4WCDrYdeYdRyNS7XvuebvCkVfqAkn0jnQLQMc=",
+  "Hash": "n7YeGR4+bGWbIWpY8MxGVA7F13qocXcb/C1d170E2KE=",
   "Source": "WorldMarket",
   "BasePath": "_content/WorldMarket",
   "Mode": "Default",
@@ -219,6 +219,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\products\\f299d870-01c2-4acb-9091-a3e70493775e"
+    },
+    {
+      "Identity": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\js\\product.js",
+      "SourceId": "WorldMarket",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\",
+      "BasePath": "_content/WorldMarket",
+      "RelativePath": "js/product.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\product.js"
     },
     {
       "Identity": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\js\\site.js",

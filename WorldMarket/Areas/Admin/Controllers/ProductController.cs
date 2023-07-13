@@ -82,5 +82,13 @@ namespace WorldMarket.Areas.Admin.Controllers
             }
             return View(obj);
         }
+        #region API CALLS
+        public IActionResult GetAll()
+        {
+            var productsList = _unitOfWork.Products.GetAll(includeProperties:"Category,CoverType");
+            return Json(new { data = productsList});
+        }
+        #endregion
+
     }
 }

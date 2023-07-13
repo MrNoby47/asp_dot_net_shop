@@ -49,6 +49,8 @@ namespace WorldMarket.Areas.Admin.Controllers
             else
             {
                 //UPDATE
+                productVM.Product = _unitOfWork.Products.GetFirstOrDefault(u => u.Id == id);
+                return View(productVM);
             }
             return View(productVM);
         }
@@ -66,6 +68,15 @@ namespace WorldMarket.Areas.Admin.Controllers
                     var upload = Path.Combine(rootPath, @"images\products");
                     var extension = Path.GetExtension(file.FileName);
 
+                    if(obj.Product.ImgUrl != null)
+                    {
+                        var oldpath = Path.Combine(rootPath, obj.Product.ImgUrl.TrimStart('\\'));
+                        if (System.IO.File.Exists(oldpath))
+                        {
+                            System.IO.File.Delete(oldpath);
+                        }
+                    }
+
                     using(var filestream = new FileStream(Path.Combine(upload, fileName+extension), FileMode.Create))
                     {
                         file.CopyTo(filestream);
@@ -73,20 +84,52 @@ namespace WorldMarket.Areas.Admin.Controllers
 
                     obj.Product.ImgUrl = Path.Combine(@"\images\product", fileName+extension);
                 }
-                _unitOfWork.Products.Add(obj.Product);
+                if(obj.Product.Id == 0)
+                {
+                    _unitOfWork.Products.Add(obj.Product);
+                    TempData["success"] = "Product Created Successfully";
+                }
+                else
+                {
+                    _unitOfWork.Products.Update(obj.Product);
+                    TempData["success"] = "Product Updated Successfully";
+                }
+               
                 _unitOfWork.Save();
-                TempData["success"] = "Product Created Successfully";
                 return RedirectToAction("Index");
                 
 
             }
             return View(obj);
         }
+
+
+
         #region API CALLS
         public IActionResult GetAll()
         {
             var productsList = _unitOfWork.Products.GetAll(includeProperties:"Category,CoverType");
             return Json(new { data = productsList});
+        }
+
+        [HttpDelete]
+        public IActionResult Delete(int? id)
+        {
+            var deleteProd = _unitOfWork.Products.GetFirstOrDefault(u => u.Id == id);
+            if(deleteProd == null)
+            {
+                return Json(new { success = false, message = "Something Wrong Happened !" });
+            }
+           
+           var oldpath = Path.Combine(_hosEnvironmeent.WebRootPath, deleteProd.ImgUrl.TrimStart('\\'));
+           if (System.IO.File.Exists(oldpath))
+           {
+               System.IO.File.Delete(oldpath);
+           }
+
+            _unitOfWork.Products.Remove(deleteProd);
+            _unitOfWork.Save();
+            return Json(new { success = true, message = "Deleted Successfully" });
         }
         #endregion
 

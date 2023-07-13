@@ -63,7 +63,7 @@ namespace WorldMarket.Areas.Admin.Controllers
                 if(file != null)
                 {
                     var fileName = Guid.NewGuid().ToString();
-                    var upload = Path.Combine(rootPath, @"images\product");
+                    var upload = Path.Combine(rootPath, @"images\products");
                     var extension = Path.GetExtension(file.FileName);
 
                     using(var filestream = new FileStream(Path.Combine(upload, fileName+extension), FileMode.Create))

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "n7YeGR4+bGWbIWpY8MxGVA7F13qocXcb/C1d170E2KE=",
+  "Hash": "v72X+4fiCnfuM0cM9oo755tlWJVk5/dfWVyTh7/CRmM=",
   "Source": "WorldMarket",
   "BasePath": "_content/WorldMarket",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WorldMarket.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\css\\BootSwatch.css",
+      "SourceId": "WorldMarket",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\",
+      "BasePath": "_content/WorldMarket",
+      "RelativePath": "css/BootSwatch.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\BootSwatch.css"
+    },
+    {
       "Identity": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\css\\site.css",
       "SourceId": "WorldMarket",
       "SourceType": "Discovered",
@@ -85,12 +102,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\04283d9c-e99c-4d64-aecc-3be95a7f8718",
+      "Identity": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\65b65a32-0391-4d0d-b0a6-7ac9c94b0fcd.jpg",
       "SourceId": "WorldMarket",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\",
       "BasePath": "_content/WorldMarket",
-      "RelativePath": "images/products/04283d9c-e99c-4d64-aecc-3be95a7f8718",
+      "RelativePath": "images/products/65b65a32-0391-4d0d-b0a6-7ac9c94b0fcd.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,15 +116,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\products\\04283d9c-e99c-4d64-aecc-3be95a7f8718"
+      "OriginalItemSpec": "wwwroot\\images\\products\\65b65a32-0391-4d0d-b0a6-7ac9c94b0fcd.jpg"
     },
     {
-      "Identity": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\1e0128ed-fd8c-4317-9f75-d8b3ae4e6b1e",
+      "Identity": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\754282af-0458-4981-ae3b-3bb8924eab61.jpg",
       "SourceId": "WorldMarket",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\",
       "BasePath": "_content/WorldMarket",
-      "RelativePath": "images/products/1e0128ed-fd8c-4317-9f75-d8b3ae4e6b1e",
+      "RelativePath": "images/products/754282af-0458-4981-ae3b-3bb8924eab61.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -116,15 +133,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\products\\1e0128ed-fd8c-4317-9f75-d8b3ae4e6b1e"
+      "OriginalItemSpec": "wwwroot\\images\\products\\754282af-0458-4981-ae3b-3bb8924eab61.jpg"
     },
     {
-      "Identity": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\4511a2b8-a77e-4ee5-af1f-3b7dae666652",
+      "Identity": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\817697b5-57e2-4cb9-a7e5-16d5a156268f.jpg",
       "SourceId": "WorldMarket",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\",
       "BasePath": "_content/WorldMarket",
-      "RelativePath": "images/products/4511a2b8-a77e-4ee5-af1f-3b7dae666652",
+      "RelativePath": "images/products/817697b5-57e2-4cb9-a7e5-16d5a156268f.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -133,15 +150,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\products\\4511a2b8-a77e-4ee5-af1f-3b7dae666652"
+      "OriginalItemSpec": "wwwroot\\images\\products\\817697b5-57e2-4cb9-a7e5-16d5a156268f.jpg"
     },
     {
-      "Identity": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\601da802-d0f3-4b9e-aeea-2145765de3d6",
+      "Identity": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\aaa0e6e2-f011-48f9-ab3b-6c56daff9786.jpg",
       "SourceId": "WorldMarket",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\",
       "BasePath": "_content/WorldMarket",
-      "RelativePath": "images/products/601da802-d0f3-4b9e-aeea-2145765de3d6",
+      "RelativePath": "images/products/aaa0e6e2-f011-48f9-ab3b-6c56daff9786.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -150,15 +167,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\products\\601da802-d0f3-4b9e-aeea-2145765de3d6"
+      "OriginalItemSpec": "wwwroot\\images\\products\\aaa0e6e2-f011-48f9-ab3b-6c56daff9786.jpg"
     },
     {
-      "Identity": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\8d1486f8-9949-450f-a085-c8eb8b2bad16",
+      "Identity": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\add6c54f-454a-4afd-894c-5388348af003.jpg",
       "SourceId": "WorldMarket",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\",
       "BasePath": "_content/WorldMarket",
-      "RelativePath": "images/products/8d1486f8-9949-450f-a085-c8eb8b2bad16",
+      "RelativePath": "images/products/add6c54f-454a-4afd-894c-5388348af003.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -167,15 +184,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\products\\8d1486f8-9949-450f-a085-c8eb8b2bad16"
+      "OriginalItemSpec": "wwwroot\\images\\products\\add6c54f-454a-4afd-894c-5388348af003.jpg"
     },
     {
-      "Identity": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\ae5e01c9-772b-4dc9-ae57-1533693e6ee8",
+      "Identity": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\ffd1be52-3dc9-4af5-be2c-ca9c6bc48859.jpg",
       "SourceId": "WorldMarket",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\",
       "BasePath": "_content/WorldMarket",
-      "RelativePath": "images/products/ae5e01c9-772b-4dc9-ae57-1533693e6ee8",
+      "RelativePath": "images/products/ffd1be52-3dc9-4af5-be2c-ca9c6bc48859.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -184,41 +201,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\products\\ae5e01c9-772b-4dc9-ae57-1533693e6ee8"
-    },
-    {
-      "Identity": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\de1426e0-0d15-4913-8ec4-1d28589b692e",
-      "SourceId": "WorldMarket",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\",
-      "BasePath": "_content/WorldMarket",
-      "RelativePath": "images/products/de1426e0-0d15-4913-8ec4-1d28589b692e",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\products\\de1426e0-0d15-4913-8ec4-1d28589b692e"
-    },
-    {
-      "Identity": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\f299d870-01c2-4acb-9091-a3e70493775e",
-      "SourceId": "WorldMarket",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\",
-      "BasePath": "_content/WorldMarket",
-      "RelativePath": "images/products/f299d870-01c2-4acb-9091-a3e70493775e",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\products\\f299d870-01c2-4acb-9091-a3e70493775e"
+      "OriginalItemSpec": "wwwroot\\images\\products\\ffd1be52-3dc9-4af5-be2c-ca9c6bc48859.jpg"
     },
     {
       "Identity": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\js\\product.js",

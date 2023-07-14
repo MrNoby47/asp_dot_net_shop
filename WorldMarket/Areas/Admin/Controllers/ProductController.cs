@@ -82,7 +82,7 @@ namespace WorldMarket.Areas.Admin.Controllers
                         file.CopyTo(filestream);
                     }
 
-                    obj.Product.ImgUrl = Path.Combine(@"\images\product", fileName+extension);
+                    obj.Product.ImgUrl = Path.Combine(@"\images\products", fileName+extension);
                 }
                 if(obj.Product.Id == 0)
                 {

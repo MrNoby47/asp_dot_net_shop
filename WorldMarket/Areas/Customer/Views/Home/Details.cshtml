@@ -1,0 +1,37 @@
+﻿@model WorldMarket.Models.View_Models.ShoppingCartVM
+
+<section style="background-color: #eee;">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6 col-xl-4">
+        <div class="card text-black">
+          <i class="fab fa-apple fa-lg pt-3 pb-1 px-3"></i>
+          <img src="@Model.Product.ImgUrl"
+          <div class="card-body">
+            <div class="text-center">
+              <h5 class="card-title">@Model.Product.Name</h5>
+                            <p class="text-muted mb-4">@Model.Product.Description</p>
+            </div>
+            <div>
+              <div class="d-flex justify-content-between">
+                                <span>List Price</span><span><strike><b>$@Model.Product.ListPrice.ToString("0.00")</b></strike></span>
+              </div>
+              <div class="d-flex justify-content-between">
+                                <span>Price</span><span>$@Model.Product.Price.ToString("0.00")</span>
+              </div>
+              <div class="d-flex justify-content-between">
+                                <span>Price 50+</span><span>$@Model.Product.Price50.ToString("0.00")</span>
+              </div>
+              <div class="d-flex justify-content-between">
+                                <span>Price 100+</span><span>$@Model.Product.Price100.ToString("0.00")</span>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between total font-weight-bold mt-4">
+              <span>Total</span><span>$7,197.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

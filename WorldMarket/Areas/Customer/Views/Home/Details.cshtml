@@ -1,37 +1,81 @@
-﻿@model WorldMarket.Models.View_Models.ShoppingCartVM
+﻿@model ShoppingCart
 
-<section style="background-color: #eee;">
-  <div class="container py-5">
-    <div class="row justify-content-center">
-      <div class="col-md-8 col-lg-6 col-xl-4">
-        <div class="card text-black">
-          <i class="fab fa-apple fa-lg pt-3 pb-1 px-3"></i>
-          <img src="@Model.Product.ImgUrl"
-          <div class="card-body">
-            <div class="text-center">
-              <h5 class="card-title">@Model.Product.Name</h5>
-                            <p class="text-muted mb-4">@Model.Product.Description</p>
+<form method="post" class="pt-4">
+    <input hidden asp-for="Product.Id" />
+    <div class="container card backgroundWhite">
+        <div class="card-header bg-primary text-light ml-0 row">
+            <div class="col-12 col-md-6">
+                <h1 class="text-white-50">@Model.Product.Name</h1>
+                @*<p class="text-warning">by @Model.Product.Author</p>*@
             </div>
-            <div>
-              <div class="d-flex justify-content-between">
-                                <span>List Price</span><span><strike><b>$@Model.Product.ListPrice.ToString("0.00")</b></strike></span>
-              </div>
-              <div class="d-flex justify-content-between">
-                                <span>Price</span><span>$@Model.Product.Price.ToString("0.00")</span>
-              </div>
-              <div class="d-flex justify-content-between">
-                                <span>Price 50+</span><span>$@Model.Product.Price50.ToString("0.00")</span>
-              </div>
-              <div class="d-flex justify-content-between">
-                                <span>Price 100+</span><span>$@Model.Product.Price100.ToString("0.00")</span>
-              </div>
+            <div class="col-12 col-md-6 text-end pt-4">
+                <span class="badge bg-info pt-2" style="height:30px;">@Model.Product.CoverType.Name</span>
+                <span class="badge bg-warning pt-2" style="height:30px;">@Model.Product.Category.Name</span>
             </div>
-            <div class="d-flex justify-content-between total font-weight-bold mt-4">
-              <span>Total</span><span>$7,197.00</span>
-            </div>
-          </div>
         </div>
-      </div>
+        <div class="card-body row container">
+            <div class="container rounded p-2">
+                <div class="row">
+                    <div class="col-8 col-lg-8">
+
+                        @*<div class="row pl-2">
+                            <h5 class="text-muted">ISBN : @Model.Product.ISBN</h5>
+                        </div>*@
+                        <div class="row pl-2">
+                            <h5 class="text-muted pb-2">List Price: <strike>@Model.Product.ListPrice.ToString("c")</strike></h5>
+                        </div>
+                        <div class="row text-center pl-2">
+                            <div class="p-1 col-2 bg-secondary border-bottom">
+                                <div>Quantity</div>
+                            </div>
+                            <div class="p-1 col-2 bg-secondary border-bottom">
+                                <div>1-49</div>
+                            </div>
+                            <div class="p-1 col-2 bg-secondary border-bottom">
+                                <div>50-99</div>
+                            </div>
+                            <div class="p-1 col-2 bg-secondary border-bottom">
+                                <div>100+</div>
+                            </div>
+                        </div>
+                        <div class="row text-center pl-2" style="color:maroon; font-weight:bold">
+                            <div class="p-1 col-2 bg-secondary">
+                                <div>Price</div>
+                            </div>
+                            <div class="p-1 col-2 bg-secondary">
+                                <div>@Model.Product.Price.ToString("c")</div>
+                            </div>
+                            <div class="p-1 col-2 bg-secondary">
+                                <div>@Model.Product.Price50.ToString("c")</div>
+                            </div>
+                            <div class="p-1 col-2 bg-secondary">
+                                <div>@Model.Product.Price100.ToString("c")</div>
+                            </div>
+                        </div>
+                        <div class="row pl-2">
+                            <p class="text-secondary">@Html.Raw(Model.Product.Description)</p>
+                        </div>
+                        <div class="row pl-2">
+                            <div class="col-2 text-primary"><h4>Count</h4></div>
+                            <div class="col-10"><input class="form-control" asp-for="Count" /></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3 offset-lg-1 text-center">
+                        <img src="@Model.Product.ImgUrl" width="100%" class="rounded" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <a asp-action="Index" class="btn btn-success form-control " style="height:50px;">Back to Home</a>
+                </div>
+                <div class="col-12 col-md-6 pb-1">
+                    <button type="submit" value="Add to Cart" class="btn btn-primary form-control" style="height:50px;">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
     </div>
-  </div>
-</section>
+</form>

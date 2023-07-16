@@ -2,7 +2,6 @@
 using System.Diagnostics;
 using WorldMarket.DataAccess.Repository.IRepository;
 using WorldMarket.Models;
-using WorldMarket.Models.View_Models;
 
 namespace WorldMarket.Areas.Customer.Controllers
 {
@@ -30,9 +29,9 @@ namespace WorldMarket.Areas.Customer.Controllers
         }
         public IActionResult Details(int? id)
         {
-            ShoppingCartVM shoppingCartVM = new()
+            ShoppingCart shoppingCartVM = new()
             {
-                count = 1,
+                Count = 1,
                 Product = _unitOfWork.Products.GetFirstOrDefault(u => u.Id == id, includeProperties: "Category,CoverType")
             };
             return View(shoppingCartVM);

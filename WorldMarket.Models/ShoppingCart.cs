@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WorldMarket.Models.View_Models
+namespace WorldMarket.Models
 {
-    public class ShoppingCartVM
+    public class ShoppingCart
     {
         public Product Product { get; set; }
-        public int count { get; set; }
+        public int Count { get; set; }
     }
 }

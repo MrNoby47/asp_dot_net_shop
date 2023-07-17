@@ -45,7 +45,7 @@ function deleteCompany(url) {
                 type: 'DELETE',
                 success: function (data) {
                     if (data.success) {
-                        dataTable.ajax.reload();
+                        CompanyTable.ajax.reload();
                         toastr.success(data.message);
                     }
                     else {

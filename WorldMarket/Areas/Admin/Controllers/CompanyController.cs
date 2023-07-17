@@ -55,7 +55,7 @@ namespace WorldMarket.Areas.Admin.Controllers
             {
                 _unitOfWork.Companies.Update(obj);
                 _unitOfWork.Save();
-                TempData["success"] = "Company Created Successfully";
+                TempData["success"] = "Company Edited Successfully";
                 return RedirectToAction("Index");
             }
             return View(obj);

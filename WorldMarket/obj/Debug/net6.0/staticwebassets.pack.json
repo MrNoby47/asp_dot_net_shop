@@ -17,10 +17,6 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\48d8d7dc-9ae4-46c7-aa52-87d21ed98d45.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\48d8d7dc-9ae4-46c7-aa52-87d21ed98d45.jpg"
-    },
-    {
       "Id": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\754282af-0458-4981-ae3b-3bb8924eab61.jpg",
       "PackagePath": "staticwebassets\\images\\products\\754282af-0458-4981-ae3b-3bb8924eab61.jpg"
     },
@@ -35,6 +31,10 @@
     {
       "Id": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\ffd1be52-3dc9-4af5-be2c-ca9c6bc48859.jpg",
       "PackagePath": "staticwebassets\\images\\products\\ffd1be52-3dc9-4af5-be2c-ca9c6bc48859.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\js\\company.js",
+      "PackagePath": "staticwebassets\\js\\company.js"
     },
     {
       "Id": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\js\\product.js",

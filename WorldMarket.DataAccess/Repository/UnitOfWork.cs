@@ -17,11 +17,13 @@ namespace WorldMarket.DataAccess.Repository
             Categories = new CategoryRepository(db);
             CoverTypes = new CoverTypeRepository(db);
             Products = new ProductRepository(db);
+            Companies = new CompanyRepository(db);
         }
 
         public ICategoryRepository Categories { get; private set; }
         public ICoverTypeRepository CoverTypes { get; private set; }
         public IProductRepository Products { get; private set; }    
+        public ICompanyRepository Companies { get; private set; }
 
         public void Save()
         {

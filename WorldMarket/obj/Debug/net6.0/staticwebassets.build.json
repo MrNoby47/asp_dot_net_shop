@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "c7ZQniGbSUqZw7CABZQpja2GBXE8wrPgsMtASUDHp7M=",
+  "Hash": "cll9gBG3+XfwgwIFTwCnyJvUqgy9L786jnUjcPWuqo4=",
   "Source": "WorldMarket",
   "BasePath": "_content/WorldMarket",
   "Mode": "Default",
@@ -1122,23 +1122,6 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\48d8d7dc-9ae4-46c7-aa52-87d21ed98d45.jpg",
-      "SourceId": "WorldMarket",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\",
-      "BasePath": "_content/WorldMarket",
-      "RelativePath": "images/products/48d8d7dc-9ae4-46c7-aa52-87d21ed98d45.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\products\\48d8d7dc-9ae4-46c7-aa52-87d21ed98d45.jpg"
-    },
-    {
       "Identity": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\754282af-0458-4981-ae3b-3bb8924eab61.jpg",
       "SourceId": "WorldMarket",
       "SourceType": "Discovered",
@@ -1205,6 +1188,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\products\\ffd1be52-3dc9-4af5-be2c-ca9c6bc48859.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\js\\company.js",
+      "SourceId": "WorldMarket",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\",
+      "BasePath": "_content/WorldMarket",
+      "RelativePath": "js/company.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\company.js"
     },
     {
       "Identity": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\js\\product.js",

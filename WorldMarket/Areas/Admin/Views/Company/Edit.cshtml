@@ -1,0 +1,52 @@
+﻿@model Company
+
+<form method="post" asp-action="Edit">
+    <div class="mt-4 p-3 border">
+        <div class="row pb-2">
+            <h2>Update Company</h2>
+            <hr />
+        </div>
+
+        <di class="mb-3">
+            <label asp-for="Name"></label>
+            <input class="form-control" asp-for="Name" />
+            <span asp-validation-for="Name" style="color:red;"></span>
+        </di>
+        <di class="mb-3">
+            <label asp-for="State"></label>
+            <input class="form-control" asp-for="State" />
+            <span asp-validation-for="State" style="color:red;"></span>
+        </di>
+        <di class="mb-3">
+            <label asp-for="City"></label>
+            <input class="form-control" asp-for="City" />
+            <span asp-validation-for="City" style="color:red;"></span>
+        </di>
+        <di class="mb-3">
+            <label asp-for="PostalCode"></label>
+            <input class="form-control" asp-for="PostalCode" />
+            <span asp-validation-for="PostalCode" style="color:red;"></span>
+        </di>
+        <di class="mb-3">
+            <label asp-for="StreetAdress"></label>
+            <input class="form-control" asp-for="StreetAdress" />
+            <span asp-validation-for="StreetAdress" style="color:red;"></span>
+        </di>
+        <di class="mb-3">
+            <label asp-for="PhoneNnumber"></label>
+            <input class="form-control" asp-for="PhoneNnumber" />
+            <span asp-validation-for="PhoneNnumber" style="color:red;"></span>
+        </di>
+        <di class="mb-3">
+            <button type="submit" class="btn btn-primary" style="width:150px;">Update</button>
+            <a asp-action="Index" asp-controller="Company" asp-area="Admin" class="btn btn-secondary" style="width:150px;">Back</a>
+        </di>
+
+    </div>
+
+</form>
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

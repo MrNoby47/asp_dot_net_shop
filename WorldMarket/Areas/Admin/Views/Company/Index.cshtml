@@ -1,0 +1,27 @@
+﻿<div class="container p-3">
+    <div class="p-3 mt-4 row">
+        <div class="col-6">
+            <h2 class="text-primary">Company List</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-action="Create" asp-controller="Company" asp-area="Admin" class="btn btn-primary">Create New Company &nbsp; <i class="bi bi-plus-circle"></i></a>
+        </div>
+
+    </div>
+    <br /><br />
+    <table class="table table-bordered table-striped" style="width:100%" id="CompanyTb">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>State</th>
+                <th>City</th>
+                <th>Phone Number</th>
+                <th></th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+@section Scripts{
+    <script src="~/js/company.js"></script>
+}

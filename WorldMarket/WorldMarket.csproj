@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WorldMarket.DataAccess\WorldMarket.DataAccess.csproj" />
+    <ProjectReference Include="..\WorldMarket.Utility\WorldMarket.Utility.csproj" />
   </ItemGroup>
 
   <ItemGroup>

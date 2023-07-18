@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace WorldMarket.Utility
 {
-    internal class SD
+    public class SD
     {
+        public const string SD_Role_Ind = "Individual";
+        public const string SD_Role_Admin = "Admin";
+        public const string SD_Role_Emp = "Employee";
+        public const string SD_Role_Comp = "Company";
     }
 }

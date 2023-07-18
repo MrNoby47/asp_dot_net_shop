@@ -55,7 +55,7 @@ namespace WorldMarket.Areas.Admin.Controllers
             {
                 _unitOfWork.Companies.Update(obj);
                 _unitOfWork.Save();
-                TempData["success"] = "Company Edited Successfully";
+                TempData["success"] = "Company Updated Successfully";
                 return RedirectToAction("Index");
             }
             return View(obj);
@@ -75,7 +75,7 @@ namespace WorldMarket.Areas.Admin.Controllers
             var CompanyDel = _unitOfWork.Companies.GetFirstOrDefault(u => u.Id == id);
             if(CompanyDel == null)
             {
-                return Json(new { sucess = false, message = "The Selected Company Is Available" });
+                return Json(new { sucess = false, message = "The Selected Company Is Not Available" });
             }
             _unitOfWork.Companies.Remove(CompanyDel);
             _unitOfWork.Save();

@@ -4678,6 +4678,19 @@
         "runtime": {
           "bin/placeholder/WorldMarket.Models.dll": {}
         }
+      },
+      "WorldMarket.Utility/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.UI": "6.0.20"
+        },
+        "compile": {
+          "bin/placeholder/WorldMarket.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WorldMarket.Utility.dll": {}
+        }
       }
     }
   },
@@ -12574,6 +12587,11 @@
       "type": "project",
       "path": "../WorldMarket.Models/WorldMarket.Models.csproj",
       "msbuildProject": "../WorldMarket.Models/WorldMarket.Models.csproj"
+    },
+    "WorldMarket.Utility/1.0.0": {
+      "type": "project",
+      "path": "../WorldMarket.Utility/WorldMarket.Utility.csproj",
+      "msbuildProject": "../WorldMarket.Utility/WorldMarket.Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -12586,7 +12604,8 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.20",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.20",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.15",
-      "WorldMarket.DataAccess >= 1.0.0"
+      "WorldMarket.DataAccess >= 1.0.0",
+      "WorldMarket.Utility >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12624,6 +12643,9 @@
           "projectReferences": {
             "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket.DataAccess\\WorldMarket.DataAccess.csproj": {
               "projectPath": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket.DataAccess\\WorldMarket.DataAccess.csproj"
+            },
+            "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket.Utility\\WorldMarket.Utility.csproj": {
+              "projectPath": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket.Utility\\WorldMarket.Utility.csproj"
             }
           }
         }

@@ -43,6 +43,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "6.0.20",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.15",
           "WorldMarket.DataAccess": "1.0.0",
+          "WorldMarket.Utility": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery.Reference": "6.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions.Reference": "6.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "6.0.0.0",
@@ -3406,6 +3407,17 @@
         },
         "compile": {
           "WorldMarket.Models.dll": {}
+        }
+      },
+      "WorldMarket.Utility/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.UI": "6.0.20"
+        },
+        "runtime": {
+          "WorldMarket.Utility.dll": {}
+        },
+        "compile": {
+          "WorldMarket.Utility.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery.Reference/6.0.0.0": {
@@ -7005,6 +7017,11 @@
       "sha512": ""
     },
     "WorldMarket.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WorldMarket.Utility/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

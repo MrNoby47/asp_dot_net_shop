@@ -44,6 +44,28 @@ namespace WorldMarket.Areas.Customer.Controllers
             _unitOfWork.Save();
             return RedirectToAction(nameof(Index));
         }
+        public IActionResult Minus(int cartId)
+        {
+            var cartFromDb = _unitOfWork.ShoppingCarts.GetFirstOrDefault(u => u.Id == cartId);
+            if(cartFromDb.Count <= 1)
+            {
+                _unitOfWork.ShoppingCarts.Remove(cartFromDb);
+            }
+            else
+            {
+                _unitOfWork.ShoppingCarts.Decrementation(cartFromDb, 1);
+            }
+            _unitOfWork.Save();
+            return RedirectToAction(nameof(Index));
+        }
+        public IActionResult Remove(int cartId)
+        {
+            var cartFromDb = _unitOfWork.ShoppingCarts.GetFirstOrDefault(u => u.Id == cartId);
+
+            _unitOfWork.ShoppingCarts.Remove(cartFromDb);
+            _unitOfWork.Save();
+            return RedirectToAction(nameof(Index));
+        }
 
 
 

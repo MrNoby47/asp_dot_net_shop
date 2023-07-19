@@ -29,11 +29,12 @@ namespace WorldMarket.Areas.Customer.Controllers
         {
             return View();
         }
-        public IActionResult Details(int? productId)
+        public IActionResult Details(int productId)
         {
             ShoppingCart shoppingCartVM = new()
             {
                 Count = 1,
+                ProductId = productId,
                 Product = _unitOfWork.Products.GetFirstOrDefault(u => u.Id == productId, includeProperties: "Category,CoverType")
             };
             return View(shoppingCartVM);
@@ -47,7 +48,17 @@ namespace WorldMarket.Areas.Customer.Controllers
             var identityUser = (ClaimsIdentity)User.Identity;
             var claim = identityUser.FindFirst(ClaimTypes.NameIdentifier);
             shoppingCart.ApplicationUserId = claim.Value;
-            _unitOfWork.ShoppingCarts.Add(shoppingCart);
+
+            ShoppingCart cartFromDb = _unitOfWork.ShoppingCarts.GetFirstOrDefault(u => u.ApplicationUserId == claim.Value && u.ProductId == shoppingCart.ProductId);
+            if (cartFromDb == null)
+            {
+                _unitOfWork.ShoppingCarts.Add(shoppingCart);
+            }
+            else
+            {
+                _unitOfWork.ShoppingCarts.Incrementation(cartFromDb, shoppingCart.Count);
+            }
+            
             _unitOfWork.Save();
             return RedirectToAction(nameof(Index));   
         }

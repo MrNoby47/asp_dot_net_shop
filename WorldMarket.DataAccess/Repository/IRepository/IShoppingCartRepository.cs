@@ -9,5 +9,7 @@ namespace WorldMarket.DataAccess.Repository.IRepository
 {
     public interface IShoppingCartRepository: IRepository<ShoppingCart>
     {
+        int Incrementation(ShoppingCart shoppingCart, int count);
+        int Decrementation(ShoppingCart shoppingCart, int count);
     }
 }

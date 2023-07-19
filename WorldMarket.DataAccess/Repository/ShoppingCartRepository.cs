@@ -16,5 +16,17 @@ namespace WorldMarket.DataAccess.Repository
         {
             _db = db;
         }
+
+        public int Decrementation(ShoppingCart shoppingCart, int count)
+        {
+            shoppingCart.Count -= count;
+            return shoppingCart.Count;
+        }
+
+        public int Incrementation(ShoppingCart shoppingCart, int count)
+        {
+            shoppingCart.Count += count;
+            return shoppingCart.Count;
+        }
     }
 }

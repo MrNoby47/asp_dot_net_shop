@@ -20,5 +20,7 @@ namespace WorldMarket.Models
         [ValidateNever]
         [ForeignKey("ApplicationUserId")]
         public ApplicationUser ApplicationUser { get; set; }
+        [NotMapped]
+        public double Price { get;set; }
     }
 }

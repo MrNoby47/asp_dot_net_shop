@@ -1,0 +1,81 @@
+﻿@model WorldMarket.Models.View_Models.CartVM
+
+<form method="post" class="pt-4">
+    <br />
+
+    <div class="conatiner card backgroundWhiteBorder">
+        <div class="container">
+            <div class="card-header bg-dark text-light ml-0 row">
+                <div class="col-6">
+                    <i class="fa fa-shopping-cart"></i> &nbsp;
+                    Shopping Cart
+                </div>
+                <div class="col-6 text-end">
+                    <a asp-area="Customer" asp-controller="Home" asp-action="Index" class="btn btn-outline-info btn-sm">Continue Shopping</a>
+                </div>
+            </div>
+
+            <div class="card-body row container">
+                @foreach (var item in Model.ListCart)
+                {
+                    <div class="row">
+                        <div class="d-none d-lg-block col-lg-1 text-center py-2">
+                            <img src="@item.Product.ImgUrl" class="rounded" width="100%" />
+                        </div>
+                        <div class="col-12 text-sm-center col-lg-6 text-lg-left">
+                            <h5><strong>@item.Product.Name</strong></h5>
+                            <p><small>@Html.Raw(item.Product.Description)</small></p>
+                        </div>
+                        <div class="col-12 text-sm-center col-lg-5 text-lg-right row">
+                            <div class="col-4 text-md-right" style="padding-top:5px;">
+                                <h6><strong>@item.Price.ToString("c")<span class="text-muted">&nbsp;x&nbsp;</span>@item.Count</strong></h6>
+                            </div>
+                            <div class="col-6 col-sm-4 col-lg-6">
+                                <div class="float-right mx-1 mb-3">
+                                    <a asp-action="plus" asp-route-cartId="@item.Id" class="btn btn-primary">
+                                        <i class="bi bi-plus"></i>
+                                    </a>
+                                </div>
+                                <div class="float-right mx-1 mb-3">
+                                    <a asp-action="minus" asp-route-cartId="@item.Id" class="btn btn-warning">
+                                        <i class="bi bi-dash"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-2 col-sm-4 col-lg-2 text-right">
+                                <a asp-action="remove" asp-route-cartId="@item.Id" class="btn btn-danger">
+                                    <i class="bi bi-trash"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+
+                }
+                <div class="row">
+                    <div class="col-12 col-md-6 offset-md-6 col-lg-4 offset-lg-8 pr-4">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex justify-content-between bg-light">
+                                <span class="text-info"> Total (USD)</span>
+                                <strong class="text-info">@Model.TotalPrice.ToString("c")<span id="txtOrderTotal"></span></strong>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card-footer">
+                <div class="card-footer row">
+
+                    <div class="col-sm-12 col-lg-4 col-md-6 offset-lg-8 offset-md-6 ">
+
+                        <a asp-area="Customer" asp-controller="Cart" asp-action="Summary" class="btn btn-success form-control">Summary</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>

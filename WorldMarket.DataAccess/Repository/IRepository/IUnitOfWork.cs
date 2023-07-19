@@ -12,6 +12,8 @@ namespace WorldMarket.DataAccess.Repository.IRepository
         ICoverTypeRepository CoverTypes { get; }
         IProductRepository Products { get; }
         ICompanyRepository Companies { get; }
+        IApplicationUserRepository ApplicationUsers { get; }
+        IShoppingCartRepository ShoppingCarts { get; }
         void Save();
     }
 }

@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Security.Claims;
 using WorldMarket.DataAccess.Repository.IRepository;
 using WorldMarket.Models;
 
@@ -27,15 +29,28 @@ namespace WorldMarket.Areas.Customer.Controllers
         {
             return View();
         }
-        public IActionResult Details(int? id)
+        public IActionResult Details(int? productId)
         {
             ShoppingCart shoppingCartVM = new()
             {
                 Count = 1,
-                Product = _unitOfWork.Products.GetFirstOrDefault(u => u.Id == id, includeProperties: "Category,CoverType")
+                Product = _unitOfWork.Products.GetFirstOrDefault(u => u.Id == productId, includeProperties: "Category,CoverType")
             };
             return View(shoppingCartVM);
-      }
+        }
+        //POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize]
+        public IActionResult Details(ShoppingCart shoppingCart)
+        {
+            var identityUser = (ClaimsIdentity)User.Identity;
+            var claim = identityUser.FindFirst(ClaimTypes.NameIdentifier);
+            shoppingCart.ApplicationUserId = claim.Value;
+            _unitOfWork.ShoppingCarts.Add(shoppingCart);
+            _unitOfWork.Save();
+            return RedirectToAction(nameof(Index));   
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

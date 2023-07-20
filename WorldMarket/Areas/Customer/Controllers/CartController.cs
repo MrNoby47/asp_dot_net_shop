@@ -30,7 +30,7 @@ namespace WorldMarket.Areas.Customer.Controllers
             foreach(var item in ShoppingCartVM.ListCart)
             {
                 item.Price = GetPriceByQuantity(item.Count, item.Product.Price, item.Product.Price50, item.Product.Price100);
-                ShoppingCartVM.TotalPrice += (item.Price * item.Count);
+                ShoppingCartVM.OrderHeader.OrderTotal += (item.Price * item.Count);
             }
             
             return View(ShoppingCartVM);
@@ -67,7 +67,22 @@ namespace WorldMarket.Areas.Customer.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-
+        //GET
+        public IActionResult Summary(int id)
+        {
+            var identityUser = (ClaimsIdentity)User.Identity;
+            var claim = identityUser.FindFirst(ClaimTypes.NameIdentifier);
+            ShoppingCartVM = new CartVM()
+            {
+                ListCart = _unitOfWork.ShoppingCarts.GetAll(u => u.ApplicationUserId == claim.Value, includeProperties: "Product"),
+                OrderHeader = new()
+            };
+            foreach(var item in ShoppingCartVM.ListCart){
+                item.Price = GetPriceByQuantity(item.Count, item.Product.Price, item.Product.Price50, item.Product.Price100);
+                ShoppingCartVM.OrderHeader.OrderTotal += (item.Price * item.Count);
+            }
+            return View(ShoppingCartVM);
+        }
 
         private double GetPriceByQuantity(double quantity, double price, double price50, double price100) {
         

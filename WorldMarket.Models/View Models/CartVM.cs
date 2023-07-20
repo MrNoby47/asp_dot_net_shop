@@ -10,7 +10,7 @@ namespace WorldMarket.Models.View_Models
     public class CartVM
     {
         public IEnumerable<ShoppingCart> ListCart { get; set; }
-        public double TotalPrice { get; set; }
+        public OrderHeader OrderHeader { get; set; }
        
     }
 }

@@ -21,6 +21,8 @@ namespace WorldMarket.DataAccess.Repository
             Companies = new CompanyRepository(db);
             ApplicationUsers = new ApplicationUserRepositotry(db);
             ShoppingCarts = new ShoppingCartRepository(db);
+            OrderDetails = new OrderDetailRepository(db);
+            OrderHeaders = new OrderHeaderRepository(db);
         }
 
         public ICategoryRepository Categories { get; private set; }
@@ -28,7 +30,9 @@ namespace WorldMarket.DataAccess.Repository
         public IProductRepository Products { get; private set; }    
         public ICompanyRepository Companies { get; private set; }
         public IApplicationUserRepository ApplicationUsers { get; private set; }
-        public IShoppingCartRepository ShoppingCarts { get; set; }
+        public IShoppingCartRepository ShoppingCarts { get; private set; }
+        public IOrderDeatailsRepository OrderDetails { get; private set; }
+        public IOrderHeaderRepository OrderHeaders { get; private set; }
 
        
         public void Save()

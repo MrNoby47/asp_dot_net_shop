@@ -1,4 +1,8 @@
 ﻿@model WorldMarket.Models.View_Models.CartVM
+@using Microsoft.Extensions.Options
+@*Inject StripeSetting as Stripe Inside the View*@
+@inject IOptions<WorldMarket.Utility.StripeSetting> Stripe 
+
 
 
 <form method="post" asp-action="Summary">

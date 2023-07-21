@@ -5,6 +5,7 @@ using System.Security.Claims;
 using WorldMarket.DataAccess.Repository.IRepository;
 using WorldMarket.Models;
 using WorldMarket.Models.View_Models;
+using WorldMarket.Utility;
 
 namespace WorldMarket.Areas.Customer.Controllers
 {
@@ -13,6 +14,7 @@ namespace WorldMarket.Areas.Customer.Controllers
     public class CartController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
+        [BindProperty]
         public CartVM ShoppingCartVM { get; set; }
         public CartController(IUnitOfWork unitOfWork)
         {
@@ -70,7 +72,7 @@ namespace WorldMarket.Areas.Customer.Controllers
         }
 
         //GET
-        public IActionResult Summary(int id)
+        public IActionResult Summary()
         {
             var identityUser = (ClaimsIdentity)User.Identity;
             var claim = identityUser.FindFirst(ClaimTypes.NameIdentifier);
@@ -92,6 +94,49 @@ namespace WorldMarket.Areas.Customer.Controllers
                 ShoppingCartVM.OrderHeader.OrderTotal += (item.Price * item.Count);
             }
             return View(ShoppingCartVM);
+        }
+
+        //POST 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [ActionName("Summary")]
+        public IActionResult SummaryPOST()
+        {
+            var claimIdentity = (ClaimsIdentity)User.Identity;
+            var claim = claimIdentity.FindFirst(ClaimTypes.NameIdentifier);
+
+            ShoppingCartVM.ListCart = _unitOfWork.ShoppingCarts.GetAll(x => x.ApplicationUserId == claim.Value, includeProperties: "Product");
+
+            ShoppingCartVM.OrderHeader.OrderStatus = SD.OrderStatusPending;
+            ShoppingCartVM.OrderHeader.PaymentStatus = SD.PaymentStatusPending;
+            ShoppingCartVM.OrderHeader.OrderDate = System.DateTime.Now;
+            ShoppingCartVM.OrderHeader.ApplicationUserId = claim.Value;
+
+            foreach(var cart in ShoppingCartVM.ListCart)
+            {
+                cart.Price= GetPriceByQuantity(cart.Count, cart.Price, cart.Product.Price50, cart.Product.Price100);
+                ShoppingCartVM.OrderHeader.OrderTotal += (cart.Price * cart.Count);
+            }
+            _unitOfWork.OrderHeaders.Add(ShoppingCartVM.OrderHeader);
+            _unitOfWork.Save();
+
+
+            foreach(var cart in  ShoppingCartVM.ListCart) {
+                OrderDetail orderDetail = new()
+                {
+                    ProductId = cart.ProductId,
+                    Price = cart.Price,
+                    Count = cart.Count,
+                    OrderHeaderId = ShoppingCartVM.OrderHeader.Id,
+                };
+                _unitOfWork.OrderDetails.Add(orderDetail);
+                _unitOfWork.Save();
+            
+            }
+            _unitOfWork.ShoppingCarts.RemoveRange(ShoppingCartVM.ListCart);
+            _unitOfWork.Save();
+            return View(ShoppingCartVM);
+
         }
 
         private double GetPriceByQuantity(double quantity, double price, double price50, double price100) {

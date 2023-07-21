@@ -25,9 +25,11 @@ namespace WorldMarket.Areas.Customer.Controllers
 
             ShoppingCartVM = new CartVM()
             {
-                ListCart = _unitOfWork.ShoppingCarts.GetAll(u => u.ApplicationUserId == claim.Value, includeProperties: "Product")
+                ListCart = _unitOfWork.ShoppingCarts.GetAll(u => u.ApplicationUserId == claim.Value, includeProperties: "Product"),
+                OrderHeader = new()
             };
-            foreach(var item in ShoppingCartVM.ListCart)
+           
+            foreach (var item in ShoppingCartVM.ListCart)
             {
                 item.Price = GetPriceByQuantity(item.Count, item.Product.Price, item.Product.Price50, item.Product.Price100);
                 ShoppingCartVM.OrderHeader.OrderTotal += (item.Price * item.Count);
@@ -77,7 +79,15 @@ namespace WorldMarket.Areas.Customer.Controllers
                 ListCart = _unitOfWork.ShoppingCarts.GetAll(u => u.ApplicationUserId == claim.Value, includeProperties: "Product"),
                 OrderHeader = new()
             };
-            foreach(var item in ShoppingCartVM.ListCart){
+            ShoppingCartVM.OrderHeader.ApplicationUser = _unitOfWork.ApplicationUsers.GetFirstOrDefault(u => u.Id == claim.Value);
+
+            ShoppingCartVM.OrderHeader.Name = ShoppingCartVM.OrderHeader.ApplicationUser.Name;
+            ShoppingCartVM.OrderHeader.City = ShoppingCartVM.OrderHeader.ApplicationUser.City;
+            ShoppingCartVM.OrderHeader.State = ShoppingCartVM.OrderHeader.ApplicationUser.State;
+            ShoppingCartVM.OrderHeader.StreetAdress = ShoppingCartVM.OrderHeader.ApplicationUser.StreetAdress;
+            ShoppingCartVM.OrderHeader.PhoneNumber = ShoppingCartVM.OrderHeader.ApplicationUser.PhoneNumber;
+            ShoppingCartVM.OrderHeader.postalCode = ShoppingCartVM.OrderHeader.ApplicationUser.ZipCode;
+            foreach (var item in ShoppingCartVM.ListCart){
                 item.Price = GetPriceByQuantity(item.Count, item.Product.Price, item.Product.Price50, item.Product.Price100);
                 ShoppingCartVM.OrderHeader.OrderTotal += (item.Price * item.Count);
             }

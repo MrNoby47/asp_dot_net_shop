@@ -11,5 +11,6 @@ namespace WorldMarket.DataAccess.Repository.IRepository
     {
         public void Update(OrderHeader obj);
         void  UpdateStatus(int id,string orderStatus, string? paymentStatus= null );
+        void UpdateStripeSessionID(int id, string SessionId, string PaymentIntentId);
     }
 }

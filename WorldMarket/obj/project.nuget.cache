@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ag4H4twUVhP3AlByQdMsmrGnDhGI5pOFnv1DaeUhOQBu1IqrtfYY8q0yYjzUTzaV8HsDmhIiHQCtn1yuZ/Xt/g==",
+  "dgSpecHash": "Wo8pex6fSIraamobCRMTQYZMVsmzR/MkC7aMfjC8ATSAay/68UjDz2Uj/8PyhDr+EpNPDIAsSwx1COd6O2LBcQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\WorldMarket.csproj",
   "expectedPackageFiles": [
@@ -187,7 +187,7 @@
     "C:\\Users\\Ishiki\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Ishiki\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Ishiki\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
-    "C:\\Users\\Ishiki\\.nuget\\packages\\stripe.net\\41.25.0\\stripe.net.41.25.0.nupkg.sha512",
+    "C:\\Users\\Ishiki\\.nuget\\packages\\stripe.net\\39.124.0\\stripe.net.39.124.0.nupkg.sha512",
     "C:\\Users\\Ishiki\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\Ishiki\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Ishiki\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

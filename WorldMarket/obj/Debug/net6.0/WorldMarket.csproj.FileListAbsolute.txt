@@ -554,3 +554,4 @@ C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket\bin\Debug\net6.0\Microso
 C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket\bin\Debug\net6.0\WorldMarket.Utility.dll
 C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket\bin\Debug\net6.0\WorldMarket.Utility.pdb
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket\bin\Debug\net6.0\Stripe.net.dll

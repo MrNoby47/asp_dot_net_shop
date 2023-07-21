@@ -21,6 +21,16 @@ namespace WorldMarket.DataAccess.Repository
             _db.OrderHeaders.Update(obj);
         }
 
+        public void UpdateStripeSessionID(int id, string SessionId, string PaymentIntentId)
+        {
+            var orderFromDb = _db.OrderHeaders.FirstOrDefault(i => i.Id == id);
+            if (orderFromDb != null) {
+
+                orderFromDb.SessionId = SessionId;
+                orderFromDb.PaymentIntentId = PaymentIntentId;
+            }
+        }
+
         public void UpdateStatus(int id, string orderStatus, string? paymentStatus = null)
         {
             var orderFromDb = _db.OrderHeaders.FirstOrDefault(u => u.Id == id);

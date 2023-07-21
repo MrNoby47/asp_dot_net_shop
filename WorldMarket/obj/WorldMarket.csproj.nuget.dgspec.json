@@ -309,7 +309,7 @@
             },
             "Stripe.net": {
               "target": "Package",
-              "version": "[41.25.0, )"
+              "version": "[39.124.0, )"
             }
           },
           "imports": [

@@ -170,6 +170,7 @@ namespace WorldMarket.Areas.Identity.Pages.Account
                 user.ZipCode = Input.ZipCode;
                 user.StreetAdress = Input.StreetAdress;
                 user.PhoneNumber = Input.PhoneNumber;
+                user.CompanyId = Input.CompanyId;
 
                 var result = await _userManager.CreateAsync(user, Input.Password);
 

@@ -5,6 +5,7 @@ using System.Numerics;
 using System.Security.Claims;
 using WorldMarket.DataAccess.Repository.IRepository;
 using WorldMarket.Models;
+using WorldMarket.Models.View_Models;
 using WorldMarket.Utility;
 
 namespace WorldMarket.Areas.Admin.Controllers
@@ -13,6 +14,8 @@ namespace WorldMarket.Areas.Admin.Controllers
     [Authorize]
     public class OrderController : Controller
     {
+        [BindProperty]
+        OrderVM orderVM { get; set; }
         private readonly IUnitOfWork _unitOfWork;
         public OrderController(IUnitOfWork unitOfWork)
         {
@@ -21,6 +24,18 @@ namespace WorldMarket.Areas.Admin.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+        public IActionResult Details(int orderId)
+        {   
+            orderVM = new OrderVM
+            {
+                OrderHeader = _unitOfWork.OrderHeaders.GetFirstOrDefault(u => u.Id == orderId, includeProperties: "ApplicationUser"),
+                OrderDetail = _unitOfWork.OrderDetails.GetAll(u => u.OrderHeaderId == orderId, includeProperties: "Product")
+            };
+
+            return View(orderVM);
+
+
         }
 
         #region API CALLS

@@ -5,6 +5,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
@@ -46,13 +47,13 @@ namespace WorldMarket.Areas.Identity.Pages.Account
             RoleManager<IdentityRole> roleManager,
             IUnitOfWork unitOfWork)
         {
-            _roleManager = roleManager;
             _userManager = userManager;
             _userStore = userStore;
             _emailStore = GetEmailStore();
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _roleManager = roleManager;
             _unitOfWork = unitOfWork;
         }
 
@@ -99,6 +100,20 @@ namespace WorldMarket.Areas.Identity.Pages.Account
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
             public string Password { get; set; }
+            [Required]
+            public string Name { get; set; }
+            public string? StreetAdress { get; set; }
+            public string? City { get; set; }
+            public string? State { get; set; }
+            public string? ZipCode { get; set; }
+            public string? PhoneNumber { get; set; }
+            public string? Role { get; set; }
+            [ValidateNever]
+            public IEnumerable<SelectListItem> RoleList { get; set; }
+            public int? CompanyId { get; set; }
+            [ForeignKey("CompanyId")]
+            [ValidateNever]
+            public IEnumerable<SelectListItem> CompanyList { get; set; }
 
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -108,21 +123,6 @@ namespace WorldMarket.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
-            [Required]
-            public string Name { get; set; }
-            public string? City { get; set; }
-            public string? State { get; set; }
-            public string? ZipCode { get; set; }
-            public string? StreetAdress { get; set; }
-            public string? PhoneNumber { get; set; }
-            public string? Role { get; set; }
-            public int? CompanyId { get; set; }
-
-            [ValidateNever]
-            public IEnumerable<SelectListItem> Rolelist { get; set; }
-            [ValidateNever]
-            public IEnumerable<SelectListItem> CompanyList { get; set; }
-
         }
 
 
@@ -130,16 +130,16 @@ namespace WorldMarket.Areas.Identity.Pages.Account
         {
             if (!_roleManager.RoleExistsAsync(SD.SD_Role_Admin).GetAwaiter().GetResult())
             {
-                _roleManager.CreateAsync(new IdentityRole(SD.SD_Role_Ind)).GetAwaiter().GetResult();
                 _roleManager.CreateAsync(new IdentityRole(SD.SD_Role_Admin)).GetAwaiter().GetResult();
                 _roleManager.CreateAsync(new IdentityRole(SD.SD_Role_Emp)).GetAwaiter().GetResult();
+                _roleManager.CreateAsync(new IdentityRole(SD.SD_Role_Ind)).GetAwaiter().GetResult();
                 _roleManager.CreateAsync(new IdentityRole(SD.SD_Role_Comp)).GetAwaiter().GetResult();
             }
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             Input = new InputModel()
             {
-                Rolelist = _roleManager.Roles.Select(x => x.Name).Select(i => new SelectListItem
+                RoleList = _roleManager.Roles.Select(x => x.Name).Select(i => new SelectListItem
                 {
                     Text = i,
                     Value = i
@@ -149,7 +149,6 @@ namespace WorldMarket.Areas.Identity.Pages.Account
                     Text = i.Name,
                     Value = i.Id.ToString()
                 })
-
             };
         }
 
@@ -163,21 +162,30 @@ namespace WorldMarket.Areas.Identity.Pages.Account
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
-                user.Name = Input.Name;
-                user.City = Input.City;
-                user.StreetAdress = Input.StreetAdress;
-                user.State = Input.State;
-                user.ZipCode = Input.ZipCode;
                 user.StreetAdress = Input.StreetAdress;
                 user.PhoneNumber = Input.PhoneNumber;
-                user.CompanyId = Input.CompanyId;
+                user.Name = Input.Name;
+                user.City = Input.City;
+                user.State = Input.State;
+                user.ZipCode = Input.ZipCode;
+                if (Input.Role == SD.SD_Role_Comp)
+                {
+                    user.CompanyId = Input.CompanyId;
+                }
 
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
-
+                    if (Input.Role == null)
+                    {
+                        await _userManager.AddToRoleAsync(user, SD.SD_Role_Ind);
+                    }
+                    else
+                    {
+                        await _userManager.AddToRoleAsync(user, Input.Role);
+                    }
                     var userId = await _userManager.GetUserIdAsync(user);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));

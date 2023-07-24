@@ -1,13 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using WorldMarket.Data;
 using WorldMarket.DataAccess.Repository;
 using WorldMarket.DataAccess.Repository.IRepository;
 using WorldMarket.Models;
+using WorldMarket.Utility;
 
 namespace WorldMarket.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.SD_Role_Admin)]
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

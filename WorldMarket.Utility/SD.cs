@@ -27,5 +27,8 @@ namespace WorldMarket.Utility
         public const string PaymentStatusDelayedPayment = "ApprovedDdelayedPayment";
         public const string PaymentStausRejected = "Rejected";
 
+
+        public const string SessionCart = "SessionShoppingCart";
+
     }
 }

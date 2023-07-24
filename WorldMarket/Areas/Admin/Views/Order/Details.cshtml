@@ -203,6 +203,10 @@
                         </h4>
                         <label class="btn btn-outline-primary form-control my-2">Order Status - @Model.OrderHeader.OrderStatus</label>
                         <ul class="list-group mb-3">
+                           @if (Model.OrderHeader.PaymentStatus == SD.PaymentStatusDelayedPayment && Model.OrderHeader.OrderStatus == SD.OrderStatusShiped)
+                            {
+                                <input type="submit" value="Pay Now" asp-action="Details" class="btn btn-success form-control my-1">
+                            }
                             @foreach (var details in Model.OrderDetail)
                             {
                                 <li class="list-group-item d-flex justify-content-between p-2">
@@ -230,11 +234,6 @@
                                 </div>
                             </li>
                         </ul>
-
-                        @if (Model.OrderHeader.PaymentStatus == SD.PaymentStatusDelayedPayment && Model.OrderHeader.OrderStatus == SD.OrderStatusShiped)
-                        {
-                            <input type="submit" value="Pay Now" asp-action="Details" class="btn btn-success form-control my-1">
-                        }
 
                         @if (User.IsInRole(SD.SD_Role_Emp) || User.IsInRole(SD.SD_Role_Admin))
                         {

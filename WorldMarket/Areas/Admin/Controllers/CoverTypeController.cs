@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using WorldMarket.DataAccess.Repository.IRepository;
 using WorldMarket.Models;
+using WorldMarket.Utility;
 
 namespace WorldMarket.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.SD_Role_Admin)]
     public class CoverTypeController : Controller
     {
         private readonly IUnitOfWork _unitOfwork;

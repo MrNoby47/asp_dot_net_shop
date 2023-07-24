@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Security.Claims;
 using WorldMarket.DataAccess.Repository.IRepository;
 using WorldMarket.Models;
+using WorldMarket.Utility;
 
 namespace WorldMarket.Areas.Customer.Controllers
 {
@@ -53,13 +54,14 @@ namespace WorldMarket.Areas.Customer.Controllers
             if (cartFromDb == null)
             {
                 _unitOfWork.ShoppingCarts.Add(shoppingCart);
+                _unitOfWork.Save();
+                HttpContext.Session.SetInt32(SD.SessionCart, _unitOfWork.ShoppingCarts.GetAll(u => u.ApplicationUserId == claim.Value).ToList().Count);
             }
             else
             {
                 _unitOfWork.ShoppingCarts.Incrementation(cartFromDb, shoppingCart.Count);
+                _unitOfWork.Save();
             }
-            
-            _unitOfWork.Save();
             return RedirectToAction(nameof(Index));   
         }
 

@@ -1,11 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using NuGet.Protocol.Plugins;
 using WorldMarket.DataAccess.Repository.IRepository;
 using WorldMarket.Models;
+using WorldMarket.Utility;
 
 namespace WorldMarket.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.SD_Role_Admin)]
     public class CompanyController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

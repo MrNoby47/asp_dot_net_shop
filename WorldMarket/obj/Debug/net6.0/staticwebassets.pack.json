@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\order_confirmation.png",
+      "PackagePath": "staticwebassets\\images\\order_confirmation.png"
+    },
+    {
       "Id": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\817697b5-57e2-4cb9-a7e5-16d5a156268f.jpg",
       "PackagePath": "staticwebassets\\images\\products\\817697b5-57e2-4cb9-a7e5-16d5a156268f.jpg"
     },

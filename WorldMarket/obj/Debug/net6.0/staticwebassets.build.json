@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hDo+b/Vd28eOkjfhja59N2rUDYSsn27odEPwSw8vbec=",
+  "Hash": "1Q14ceeZw9T/DF4gGgDMbpKYwix9zt7gxn6i06pxS/U=",
   "Source": "WorldMarket",
   "BasePath": "_content/WorldMarket",
   "Mode": "Default",
@@ -1120,6 +1120,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\order_confirmation.png",
+      "SourceId": "WorldMarket",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\",
+      "BasePath": "_content/WorldMarket",
+      "RelativePath": "images/order_confirmation.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\order_confirmation.png"
     },
     {
       "Identity": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\817697b5-57e2-4cb9-a7e5-16d5a156268f.jpg",

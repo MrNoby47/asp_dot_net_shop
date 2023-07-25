@@ -3484,7 +3484,8 @@
           "Microsoft.EntityFrameworkCore": "6.0.20",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.20",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.20",
-          "WorldMarket.Models": "1.0.0"
+          "WorldMarket.Models": "1.0.0",
+          "WorldMarket.Utility": "1.0.0"
         },
         "runtime": {
           "WorldMarket.DataAccess.dll": {}

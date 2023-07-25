@@ -4726,7 +4726,8 @@
           "Microsoft.EntityFrameworkCore": "6.0.0-preview.7.21378.4",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.0-preview.7.21378.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0-preview.7.21378.4",
-          "WorldMarket.Models": "1.0.0"
+          "WorldMarket.Models": "1.0.0",
+          "WorldMarket.Utility": "1.0.0"
         },
         "compile": {
           "bin/placeholder/WorldMarket.DataAccess.dll": {}

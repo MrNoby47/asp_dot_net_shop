@@ -34,6 +34,9 @@
             "projectReferences": {
               "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket.Models\\WorldMarket.Models.csproj": {
                 "projectPath": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket.Models\\WorldMarket.Models.csproj"
+              },
+              "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket.Utility\\WorldMarket.Utility.csproj": {
+                "projectPath": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket.Utility\\WorldMarket.Utility.csproj"
               }
             }
           }

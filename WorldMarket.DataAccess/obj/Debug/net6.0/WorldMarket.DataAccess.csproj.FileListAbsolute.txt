@@ -15,3 +15,5 @@ C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.DataAccess\obj\Debug\net
 C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.DataAccess\obj\Debug\net6.0\WorldMarket.DataAccess.pdb
 C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.DataAccess\obj\Debug\net6.0\WorldMarket.DataAccess.genruntimeconfig.cache
 C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.DataAccess\obj\Debug\net6.0\ref\WorldMarket.DataAccess.dll
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.DataAccess\bin\Debug\net6.0\WorldMarket.Utility.dll
+C:\Users\Ishiki\source\repos\WorldMarket001\WorldMarket.DataAccess\bin\Debug\net6.0\WorldMarket.Utility.pdb

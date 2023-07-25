@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WorldMarket.Models\WorldMarket.Models.csproj" />
+    <ProjectReference Include="..\WorldMarket.Utility\WorldMarket.Utility.csproj" />
   </ItemGroup>
 
 </Project>

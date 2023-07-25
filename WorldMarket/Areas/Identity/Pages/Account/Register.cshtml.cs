@@ -128,13 +128,11 @@ namespace WorldMarket.Areas.Identity.Pages.Account
 
         public async Task OnGetAsync(string returnUrl = null)
         {
-            if (!_roleManager.RoleExistsAsync(SD.SD_Role_Admin).GetAwaiter().GetResult())
-            {
-                _roleManager.CreateAsync(new IdentityRole(SD.SD_Role_Admin)).GetAwaiter().GetResult();
-                _roleManager.CreateAsync(new IdentityRole(SD.SD_Role_Emp)).GetAwaiter().GetResult();
-                _roleManager.CreateAsync(new IdentityRole(SD.SD_Role_Ind)).GetAwaiter().GetResult();
-                _roleManager.CreateAsync(new IdentityRole(SD.SD_Role_Comp)).GetAwaiter().GetResult();
-            }
+            //if (!_roleManager.RoleExistsAsync(SD.SD_Role_Admin).GetAwaiter().GetResult())
+            //{
+            //    _roleManager.CreateAsync(new IdentityRole(SD.SD_Role_Admin)).GetAwaiter().GetResult();
+                
+            //}
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             Input = new InputModel()
@@ -160,7 +158,7 @@ namespace WorldMarket.Areas.Identity.Pages.Account
             {
                 var user = CreateUser();
 
-                await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
+                await _userStore.SetUserNameAsync(user, Input.Name, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 user.StreetAdress = Input.StreetAdress;
                 user.PhoneNumber = Input.PhoneNumber;
@@ -204,8 +202,18 @@ namespace WorldMarket.Areas.Identity.Pages.Account
                     }
                     else
                     {
-                        await _signInManager.SignInAsync(user, isPersistent: false);
-                        return LocalRedirect(returnUrl);
+                        if (User.IsInRole(SD.SD_Role_Admin))
+                        {
+                            TempData["success"] = "New User Created";
+                            return Page();
+                        }
+                        else
+                        {
+                            await _signInManager.SignInAsync(user, isPersistent: false);
+                            return LocalRedirect(returnUrl);
+                        }
+
+                       
                     }
                 }
                 foreach (var error in result.Errors)

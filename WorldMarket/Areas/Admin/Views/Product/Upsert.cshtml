@@ -41,21 +41,21 @@
                         <input asp-for="Product.Price100" class="form-control" />
                         <span asp-validation-for="Product.Price100" class="text-danger"></span>
                     </div>
-                    <div class="mb-3 col-6">
+                    <div class="mb-3 col-12">
                         <label asp-for="Product.ImgUrl"></label>
                         <input type="file" asp-for="Product.ImgUrl" class="form-control" name="file" id="uploadBox" />
                     </div>
                     <div class="mb-3 col-6">
                         <label asp-for="Product.CoverTypeId"></label>
                         <select asp-for="Product.CoverTypeId" asp-items="@Model.CoverTypeList" class="form-control">
-                            <option selected disabled>---Select Cover Type---</option>
+                            <option selected disabled>-Select Cover Type-</option>
                         </select>
                         <span asp-validation-for="Product.CoverTypeId" class="text-danger"></span>
                     </div>
-                    <div class="mb-3 col-12">
+                    <div class="mb-3 col-6">
                         <label asp-for="Product.CategoryId"></label>
                         <select asp-for="Product.CategoryId" asp-items="@Model.CategoryList" class="form-control">
-                            <option disabled selected>---Select Category---</option>
+                            <option disabled selected>-Select Category-</option>
                         </select>
                         <span asp-validation-for="Product.CategoryId" class="text-danger"></span>
                     </div>

@@ -15,5 +15,6 @@ namespace WorldMarket.Models.View_Models
         public IEnumerable<SelectListItem> CoverTypeList { get; set; }
         [ValidateNever]
         public IEnumerable <SelectListItem> CategoryList { get; set;}
+
     }
 }

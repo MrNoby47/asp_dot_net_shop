@@ -11,7 +11,7 @@ namespace WorldMarket.Models
 {
     public class Product
     {
-
+        
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
@@ -35,7 +35,6 @@ namespace WorldMarket.Models
         [ValidateNever]
         [Display(Name = "Image")]
         public string ImgUrl { get; set; }
-        public List<string>? Color { get; set; }
         [Required]
         [Display(Name = "Cover")]
         public int CoverTypeId { get; set; }
@@ -50,3 +49,4 @@ namespace WorldMarket.Models
         public Category Category { get; set; }
     }
 }
+   

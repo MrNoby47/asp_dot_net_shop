@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using NuGet.Packaging.Signing;
+using System.Diagnostics.Contracts;
 using WorldMarket.DataAccess.Repository.IRepository;
 using WorldMarket.Models;
 using WorldMarket.Models.View_Models;
@@ -89,6 +90,7 @@ namespace WorldMarket.Areas.Admin.Controllers
                 }
                 if(obj.Product.Id == 0)
                 {
+                   
                     _unitOfWork.Products.Add(obj.Product);
                     TempData["success"] = "Product Created Successfully";
                 }

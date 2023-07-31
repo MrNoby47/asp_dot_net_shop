@@ -4,7 +4,7 @@
     <input asp-for="Product.Id" hidden />
     <input asp-for="Product.ImgUrl" hidden />
     <div class="row p-3 border">
-        <div class="col-10">
+        <div class="col-9">
             <div class="border mt-4 p-3">
                 <div class="row pb-2">
                     <h2 class="text-primary">@(Model.Product.Id != 0 ? "Update" : "Create") Product</h2>
@@ -45,6 +45,7 @@
                         <label asp-for="Product.ImgUrl"></label>
                         <input type="file" asp-for="Product.ImgUrl" class="form-control" name="file" id="uploadBox" />
                     </div>
+
                     <div class="mb-3 col-6">
                         <label asp-for="Product.CoverTypeId"></label>
                         <select asp-for="Product.CoverTypeId" asp-items="@Model.CoverTypeList" class="form-control">
@@ -74,16 +75,17 @@
                     </div>
                 </div>
 
+                   
+
             </div>
         </div>
         
         @if (Model.Product.Id != 0)
         {
-            <div class="col-3 offset-1 pt-4">
+            <div class="col-3 pt-4">
                 <img src="@Model.Product.ImgUrl" width="100%" style="border-radius:5px; border:1px solid #bbb9b9" />
             </div>
         }
-
     </div>
     
     

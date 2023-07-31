@@ -16,6 +16,7 @@ namespace WorldMarket.DataAccess.Repository.IRepository
         IShoppingCartRepository ShoppingCarts { get; }
         IOrderDeatailsRepository OrderDetails { get; }
         IOrderHeaderRepository OrderHeaders { get; }
+        IColorRepository Colors { get; }
         void Save();
     }
 }

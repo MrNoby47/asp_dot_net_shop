@@ -41,5 +41,5 @@ namespace WorldMarket.Models
         [Required]
         public string postalCode { get; set; }
 
-    }
+     }
 }

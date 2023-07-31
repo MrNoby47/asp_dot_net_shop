@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\css\\style-home.css",
+      "PackagePath": "staticwebassets\\css\\style-home.css"
+    },
+    {
       "Id": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -21,8 +25,32 @@
       "PackagePath": "staticwebassets\\images\\order_confirmation.png"
     },
     {
+      "Id": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\000dbadb-20ed-4720-9535-e30a2edea078.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\000dbadb-20ed-4720-9535-e30a2edea078.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\0e7c6b36-63d3-4296-bc3d-4ccc1d5ad7ad.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\0e7c6b36-63d3-4296-bc3d-4ccc1d5ad7ad.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\2f301fd8-3433-4c0b-9f42-591ec1290646.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\2f301fd8-3433-4c0b-9f42-591ec1290646.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\506825aa-4600-478c-a9d0-d79294af7d32.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\506825aa-4600-478c-a9d0-d79294af7d32.jpg"
+    },
+    {
       "Id": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\817697b5-57e2-4cb9-a7e5-16d5a156268f.jpg",
       "PackagePath": "staticwebassets\\images\\products\\817697b5-57e2-4cb9-a7e5-16d5a156268f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\992d0743-920f-42e2-986d-89862677da31.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\992d0743-920f-42e2-986d-89862677da31.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\d45dfac9-245d-4898-9ec9-346828201c4f.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\d45dfac9-245d-4898-9ec9-346828201c4f.jpg"
     },
     {
       "Id": "C:\\Users\\Ishiki\\source\\repos\\WorldMarket001\\WorldMarket\\wwwroot\\images\\products\\ffd1be52-3dc9-4af5-be2c-ca9c6bc48859.jpg",

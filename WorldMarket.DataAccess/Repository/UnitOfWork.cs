@@ -23,6 +23,7 @@ namespace WorldMarket.DataAccess.Repository
             ShoppingCarts = new ShoppingCartRepository(db);
             OrderDetails = new OrderDetailRepository(db);
             OrderHeaders = new OrderHeaderRepository(db);
+            Colors = new ColorRepository(db);
         }
 
         public ICategoryRepository Categories { get; private set; }
@@ -33,6 +34,7 @@ namespace WorldMarket.DataAccess.Repository
         public IShoppingCartRepository ShoppingCarts { get; private set; }
         public IOrderDeatailsRepository OrderDetails { get; private set; }
         public IOrderHeaderRepository OrderHeaders { get; private set; }
+        public IColorRepository Colors { get; private set; }
 
        
         public void Save()

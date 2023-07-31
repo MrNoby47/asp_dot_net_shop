@@ -249,6 +249,32 @@ namespace WorldMarket.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("WorldMarket.Models.Color", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsChecked")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("Colors");
+                });
+
             modelBuilder.Entity("WorldMarket.Models.Company", b =>
                 {
                     b.Property<int>("Id")
@@ -560,6 +586,17 @@ namespace WorldMarket.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("WorldMarket.Models.Color", b =>
+                {
+                    b.HasOne("WorldMarket.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("WorldMarket.Models.OrderDetail", b =>
